@@ -4,6 +4,9 @@ const divider = document.querySelector(".divider");
 const code = document.querySelector("span");
 
 const showAdvice = () => {
+
+    dice.children[0].classList.add("pause");
+
     fetch('https://api.adviceslip.com/advice')
   .then(response => response.json())
   .then(data => { const dataSlip = data.slip
