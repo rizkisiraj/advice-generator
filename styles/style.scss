@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+$lightCyan: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue: hsl(218, 23%, 16%);
+
+
+$quote : 28px;
+
+$font-family: 'Manrope', sans-serif;
+$weights: 800;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: $darkBlue;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    main {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 50%;
+        max-width: 500px;
+        font-family: $font-family;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $darkGrayishBlue;
+        border-radius: 10px;
+        padding: 2rem 2rem 3rem;
+
+        .dice {
+            position: absolute;
+            bottom: 0;
+            transform: translateY(50%);
+            width: 70px;
+            height: 70px;
+            background-color: $neonGreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow:
+                0 0 30px 10px $neonGreen;
+            }
+
+        }
+
+        .divider {
+            @media screen and (max-width: 280px) {
+                width: 100%;
+            }
+        }
+
+        .advice-wrapper {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 2rem;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            .advice-text {
+                
+                max-height: 100%;
+                display: flex;
+                align-items: center;
+                // margin-top: .8rem;
+                font-size: 22px;
+                text-align: center;
+                font-weight: $weights;
+                color: $lightCyan;
+
+                @media screen and (min-width: 768px) {
+                    font-size: $quote;
+                }
+            }
+
+            .advice-title {
+                span {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    color: $neonGreen;
+                }
+            }
+        }
+    
+        
+        
+    
+        
+    }
+}
+
+
