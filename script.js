@@ -1,5 +1,5 @@
 const dice = document.querySelector(".dice");
-const adviceText = document.querySelector("p");
+const adviceText = document.querySelector("blockquote");
 const divider = document.querySelector(".divider");
 const code = document.querySelector("span");
 
